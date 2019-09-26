@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Auto Loan Calculator</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <h1>Auto Loan Calculator</h1>
+    <form onsubmit="calc()">
+      <fieldset>
+        <label><input id="price" type="number" min="0" max="300000" placeholder="$" /> Price</lablel><br />
+        <label><input id="downpayment" type="number" min="0" max="300000" placeholder="$" /> Downpayment</lablel><br />
+        <label><input id="duration" type="number" min="0" max="75" /> Loan Duration (Months)</lablel><br />
+        <label><input id="rate" type="number" min="0" max="9.99" step=0.01 placeholder="%" /> Interest Rate</lablel><br />
+        <label><button id="calculate_btn" type="submit" />CRUNCH</button>
+      </fieldset>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+       const calc = () => {
+        const price = $('#price').val()
+        const downpayment = $('#downpayment').val()
+        const duration = $('#duration').val()
+        const rate = $('#rate').val()
+        const beforeInterest = price - downpayment
+        const refactoredRate = rate * .01
+        const totalInterestPaid = beforeInterest * refactoredRate
+        const totalAmt = totalInterestPaid + beforeInterest
+        const monthlyPayment = totalAmt / duration
+        const statement = 'Total Interest Paid: $' + totalInterestPaid.toFixed(2) + ', Monthly Payment: $' + monthlyPayment.toFixed(2)
+        alert(statement)
+      }
+    </script>
+  </body>
+</html>
