@@ -1,6 +1,6 @@
 # auto-loan-calc
 
-Yep so here is some deets:
+Yep so here are some deets:
 
 
 CHALLENGE
