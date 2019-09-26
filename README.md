@@ -6,12 +6,12 @@ Yep so here is some deets:
 CHALLENGE
 
 Use the following inputs:
-Car price
-Downpayment
-Interest rate
+Car price.
+Downpayment.
+Interest rate.
 Return the following:
-Estimated monthly payment
-Total interest paid (over the duration of the loan)
+Estimated monthly payment.
+Total interest paid (over the duration of the loan).
 
 I used jQuery to keep things simple.
 For the inputs I created variables based on jQuery element selectors values.
